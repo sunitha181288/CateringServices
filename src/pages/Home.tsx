@@ -3,9 +3,17 @@ import { Box, Typography, Grid } from "@mui/material";
 import ServiceCard from "../components/ServiceCard";
 import servicesData from "../assets/services.json"; // Import the JSON file
 
+// Define the type for a service object
+interface Service {
+  title: string;
+  description: string;
+  image: string;
+}
+
 const Home: React.FC = () => {
-  const [services, setServices] = useState([]); // Visible services (4 at a time)
-  const [remainingServices, setRemainingServices] = useState([]); // Remaining services
+  // State for visible services and remaining services
+  const [services, setServices] = useState<Service[]>([]); // Visible services (4 at a time)
+  const [remainingServices, setRemainingServices] = useState<Service[]>([]); // Remaining services
 
   useEffect(() => {
     // Load the services from the JSON file
@@ -18,6 +26,8 @@ const Home: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setServices((prevServices) => {
+        if (remainingServices.length === 0) return prevServices; // Avoid errors if no remaining services
+
         const nextService = remainingServices[0]; // Get the next service
         const updatedRemaining = remainingServices.slice(1); // Remove the added service from remaining
         const updatedServices = [...prevServices.slice(1), nextService]; // Remove the first service and add the new one to the end
