@@ -1,0 +1,34 @@
+[
+    {
+      "title": "Event Management",
+      "description": "Comprehensive event management services.",
+      "image": "src/assets/services1.jpg"
+    },
+    {
+      "title": "Get Together",
+      "description": "Creating memorable experiences with exceptional catering for all.",
+      "image": "src/assets/services2.jpg"
+    },
+    {
+      "title": "Engagement",
+      "description": "Creating unforgettable engagement celebrations with us.",
+      "image": "src/assets/services3.jpg"
+    },
+    {
+      "title": "Birthday Party",
+      "description": "We believe every birthday celebration should be a delightful experience.",
+      "image": "src/assets/bg1.jpg"
+    },
+    {
+      "title": "House Warming",
+      "description": "Celebrate the joy of your new home with our catering services.",
+      "image": "src/assets/bg2.jpg"
+    },
+    {
+      "title": "Corporate Events",
+      "description": "Professional catering for all your business needs.",
+      "image": "src/assets/bg3.jpg"
+    }
+  ]
+
+  
